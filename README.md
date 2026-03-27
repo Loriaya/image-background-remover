@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Image Background Remover
 
-## Getting Started
+使用 Next.js + Tailwind CSS 搭建的图片背景移除工具。
 
-First, run the development server:
+## 功能
+
+- 上传图片，自动移除背景
+- 支持 JPG/PNG，最大 10MB
+- 支持拖拽上传
+- 自动下载处理结果
+
+## 技术栈
+
+- Next.js 14 (App Router)
+- Tailwind CSS
+- TypeScript
+
+## 本地开发
 
 ```bash
+# 安装依赖
+npm install
+
+# 复制环境变量文件
+cp .env.local.example .env.local
+
+# 添加你的 remove.bg API Key
+# 编辑 .env.local 文件，添加：
+# REMOVE_BG_API_KEY=你的API密钥
+
+# 启动开发服务器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 部署
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Vercel（推荐）
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. 推送代码到 GitHub
+2. 在 Vercel 导入项目
+3. 在 Vercel 控制台添加环境变量：`REMOVE_BG_API_KEY`
+4. 部署
 
-## Learn More
+### 环境变量
 
-To learn more about Next.js, take a look at the following resources:
+| 变量名 | 说明 |
+|--------|------|
+| REMOVE_BG_API_KEY | remove.bg API Key |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+获取 API Key：https://www.remove.bg/api
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+免费版每月 150 次调用。
 
-## Deploy on Vercel
+## 许可证
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
