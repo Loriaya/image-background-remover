@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { createCache } from "@cloudflare/next-on-pages";
 
 const nextConfig: NextConfig = {
   images: {
@@ -7,6 +6,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default createCache({
-  nextConfig,
-});
+export default nextConfig;
