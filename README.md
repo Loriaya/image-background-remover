@@ -34,7 +34,15 @@ npm run dev
 
 ## 部署
 
-### Vercel（推荐）
+### Cloudflare Pages（推荐）
+
+1. 推送代码到 GitHub
+2. 在 Cloudflare Dashboard 创建 Pages 项目
+3. 连接 GitHub 仓库
+4. 添加环境变量：`REMOVE_BG_API_KEY`
+5. 部署
+
+### Vercel
 
 1. 推送代码到 GitHub
 2. 在 Vercel 导入项目
